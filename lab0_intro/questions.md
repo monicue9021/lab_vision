@@ -4,24 +4,25 @@
     >   answer
 
 2.  What is the output of the ``cal`` command?
-
         multi
         line
-        answer
+        answer  El calendario
 
 # Homework Questions
 
 1.  What is the ``grep``command?
-    >   answer
+    >   Es una linea de comando que busca una palabra especifica dentro de un file. 
 
 2.  What is a *makefile*?
-    >   answer
+    >   Es un script que utiliza make para llevar la gestión de compilación de programas. 
 
 3.  What is *git*?
-    >   answer
+    >   Es un software de control de versiones.
 
 4.  What does the ``-prune`` option of ``find`` do? Give an example
-    >   answer
+    >   La opción de "-prune" excluye los directorios deseados de la acción de "find". Es decir, "find" te indica cual es el donde están ubicados los files con algún nombre/cualquier criterio y la acción de -prune evita que "find" busque dentro de los subdirectorios que deseas ignorar. Por ejemplo,
+            find / -name text '/pics' -prune\ 
+Indica buscar todos los files que contengan 'text' en su nombre exepto en el subdirectorio /pics.
 
 5.  Where is the file ``xxxxxx``
     >   answer
@@ -33,13 +34,13 @@
     >   answer
 
 8.  What does the ``cut`` command do?
-    >   answer
+    >  Command que se utiliza para extraer secciones de una linea de input. Pueden ser bytes (-b), characters (-c) y fields (-f). 
 
 9.  What does the ``wget`` command do?
-    >   answer
+    >   Es un comando que descarga archivos a traves de una red. Significa "web get".
 
 10.  What does the ``diff`` command do?
-    >   answer
+    >  Este command analiza dos files y muestra las diferencias que hay entre los dos files. En escencia, crea una lista de instrucciones de como cambiar un archivo para que sea identico al segundo. 
 
 11.  How many users exist in *Guitaca*?
     >   answer
@@ -48,7 +49,7 @@
     >   answer
 
 13. What command will produce the number of users with shell ``/sbin/nologin`` (tip: using ``grep`` and ``wc``)
-    >   answer
+    >   grep/ sbin/nologin -print -wc
 
 14.  What is the name of the linux distribution running on *Guitaca*?
     >   answer
@@ -58,8 +59,8 @@
     Save this script as ``find_duplicates.sh`` in this directory and commit your changes to github
 
 16. What is the meaning of ``#! /bin/bash`` at the start of scripts?
-    >   answer
+    >  Le indica al shell con cual programa debe interpretar el script al ser ejecutado. En este ejemplo se indica que el script debe ser interpretado y ejecutado por el shell bash. 
 
 17. How many unique images are in the ``sipi_images`` folder?
-    >   answer
+    >   28
     
