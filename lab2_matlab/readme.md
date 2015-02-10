@@ -81,12 +81,12 @@ The [imread](http://www.mathworks.com/help/matlab/ref/imread.html) command is us
     
     What is the dimension of the output?
 
-    >   Answer
+    >   256X256 uint 8  (es en blanco y negro)
 
 3.  Read the ``4.2.03`` image
     What is the dimension of the output?
 
-    >   Answer
+    >   512X512X3 uint 8 (es a color por eso tiene el X3)
 
 ## Displaying Images
 
@@ -99,7 +99,7 @@ The following commands can be used for displaying images
 2.  Try displaying the images read in the previous point using both commands
 3.  What are the differences?
 
-    >   Answer
+    >   El command de image muestra la imagen mucho más pequeña que el command de imshow. Por esta razón se ve como si estuviese comprimida. La imagen de imshow no tiene un eje marcado mientras que la de image si.
 
 ## Writing Images
 
@@ -108,6 +108,8 @@ The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is us
 1.  Look at the manual page
 2.  Write one of the images from before as png and as jpg
 3.  Write a matlab function that takes the path of an image and converts it to jpg
+
+ANSWER: 
 
 ## Matlab and the shell
 
