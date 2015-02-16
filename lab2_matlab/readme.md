@@ -146,6 +146,11 @@ If the command or script doesn't end in ``exit`` the matlab shell will stay open
     -   Or a matlab script that calls bash 
     -   Or both
 2.  Save this script in the matlab lab folder of your git repository
+        $sudo apt-get install imagemagick
+        $convert File.tif File.jpg
+        $for f in $(find-name *.tiff);
+        do echo "converting $f";
+        convert "$f" "$(basename "$f".tif).jpg"; done
    
  Referencia: http://askubuntu.com/questions/60401/batch-processing-tif-images-converting-tif-to-jpeg
 
@@ -217,7 +222,7 @@ The [imsharpen](http://www.mathworks.com/help/images/ref/imsharpen.html) functio
 
 2.  Sharp a blurred image. What do you notice?
 
-    > Answer
+    > El contraste aumenta pero la imagen continua siendo borrosa.
 
 ### Edge detection
 
@@ -229,10 +234,10 @@ The following filters from fspecil can be used to enhance edges in an image
 
 Notice that the last two filters detect horizontal edges, in order to detect vertical edges you have to transpose them.
 
-1.  Try applying this filters
+1.  Try applying these filters
 2.  What is the difference between prewitt and sobel?
 
-    > Answer
+    > No hay un diferencia muy notable entre prewitt y sobel. Lo único que se puede ver es que Sobel crea un mayor contraste que prewitt para los edges horizontales.
 
 More sophisticated methods for finding edges can be found in the following pages
     -   http://www.mathworks.com/discovery/edge-detection.html
@@ -285,13 +290,13 @@ The [impyramid](http://www.mathworks.com/help/images/ref/impyramid.html) functio
 
 1.  Read the manual page
 2.  Create a four level pyramid from the ``5.1.12`` clock  image
-3.  At what level does the people in the picture dissappear?
+3.  At what level do the people in the picture dissappear?
 
-    >   Answer
+    >   Las personas desaparecen de la imagen (demasiado pixelado) en el tercer nivel.
     
-4.  At what level does the numbers in the clock disappear?
+4.  At what level do the numbers in the clock disappear?
 
-    >   Answer
+    >   Los numeros del reloj se empiezan a ver borrosos despues del segundo nivel y su forma desaparece completamente después del tercero.
 
 ## Template Matching
 
@@ -305,7 +310,7 @@ The [norm2corrx](http://www.mathworks.com/help/images/ref/normxcorr2.htm) can be
     ```matlab
     [train,square] = imcrop(image);
     ```
-5.  Now use [normxcorr2](http://www.mathworks.com/help/images/ref/normxcorr2.htm) to locate the train back in the image
+5.  Now use [normxcorr2](http://www.mathworks.com/help/images/ref/normxcorr2.html) to locate the train back in the image
 
     ```matlab
     c=normxcorr2(train,image);
@@ -331,7 +336,7 @@ The [norm2corrx](http://www.mathworks.com/help/images/ref/normxcorr2.htm) can be
     ```
 6.  Explain what the above code does
 
-    > Answer
+    > El código crea un template del tren basado en la imagen dada y luego hace el template matching de este grupo de pixeles dentro de la imagen para crear un match.
     
 7.  Now lets find the train in the next frame, read image ``motion05.512.tiff``.
 8.  Apply the procedure written above to it (use the train template from the past frame)
