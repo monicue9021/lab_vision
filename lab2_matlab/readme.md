@@ -146,6 +146,7 @@ If the command or script doesn't end in ``exit`` the matlab shell will stay open
     -   Or a matlab script that calls bash 
     -   Or both
 2.  Save this script in the matlab lab folder of your git repository
+
         $sudo apt-get install imagemagick
         $convert File.tif File.jpg
         $for f in $(find-name *.tiff);
@@ -342,7 +343,7 @@ The [norm2corrx](http://www.mathworks.com/help/images/ref/normxcorr2.htm) can be
 8.  Apply the procedure written above to it (use the train template from the past frame)
 9.  What are the limitations of this method?
 
-    > Answer
+    > Las limitaciones de este método es que el template se hizo de la misma imagen que se "scaneo" después para encontrar el tren. Es decir, obviamente iba a haber un match basicamente perfecto porque es la misma imagen pero si este template se hubiese usado para otra imagen completamente diferente (que tambien tenga un tren), es muy probable que el match no sea tan bueno.
 
 See [here](http://www.mathworks.com/help/images/examples/registering-an-image-using-normalized-cross-correlation.html)
 another example.
