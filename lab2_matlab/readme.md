@@ -165,15 +165,14 @@ We can do this to simulate difficult capture conditions, and evaluate the algori
          figure, imshow(A)
          figure, imshow(J)
 
-Problema: cuando uso este script para crear la imagen con el ruido "localvar" me sale el siguiente error en Matlab:
-Error using imnoise>ParseInputs (line 200)
-Too few inputs for 'localvar' noise.
+        Problema: cuando uso este script para crear la imagen con el ruido "localvar" me sale el siguiente error en Matlab:
+         Error using imnoise>ParseInputs (line 200)
+         Too few inputs for 'localvar' noise.
+        Error in imnoise (line 84)
+         [a, code, classIn, classChanged, p3, p4] =
+         ParseInputs(varargin{:});
 
-Error in imnoise (line 84)
-[a, code, classIn, classChanged, p3, p4] =
-ParseInputs(varargin{:});
-
-Nose como arreglarlo.
+      Nose como arreglarlo.
 
 
 3.  Try saving noisy images as jpg, what happens?
@@ -205,7 +204,8 @@ which can be otained from [fspecial](http://www.mathworks.com/help/images/ref/fs
 2.  Try different sizes for the filters
 3.  What differences do you notice?
 
-    > Answer
+    > Los dos filtros son bastante similares. Sin embargo, si existe una diferencia y esto tiene que ver con los "neighbor pixels". En el average filter, los pixeles al rededor del pixel que se está filtrando tienen el mismo grado de contribución al efecto del filtro mientras que en el gaussian filter los "neighbor pixels" tienen diferentes grados de contribución basados en una distribución gaussiana donde los pixeles que están más cerca tienen mayor contribución a los que están más lejos. (Respuesta basada en lo que ví y la teoría que aprendimos en clase).
+    
 
 ### Sharpen
 
@@ -213,7 +213,7 @@ The [imsharpen](http://www.mathworks.com/help/images/ref/imsharpen.html) functio
 
 1.  Sharp the ``5.1.12`` image. What do you notice?
 
-    > Answer
+    > El contraste aumenta, es decir, los pixeles negros ahora se ven más negros y los blancos ahora se ven más blancos. Sin embargo la imagen como tal no se ve significativamente nítida. 
 
 2.  Sharp a blurred image. What do you notice?
 
