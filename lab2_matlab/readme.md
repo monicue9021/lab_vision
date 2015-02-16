@@ -107,9 +107,12 @@ The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is us
 
 1.  Look at the manual page
 2.  Write one of the images from before as png and as jpg
+    > File names: my4.2.03.png, my.2.4.2.03.jpg
 3.  Write a matlab function that takes the path of an image and converts it to jpg
+    >
+      A=imread('4.2.03.tiff');
+      imwrite(A,'my.2.4.2.03.jpg')
 
-ANSWER: 
 
 ## Matlab and the shell
 
@@ -140,6 +143,7 @@ If the command or script doesn't end in ``exit`` the matlab shell will stay open
     -   Or a matlab script that calls bash 
     -   Or both
 2.  Save this script in the matlab lab folder of your git repository
+    Referencia: http://askubuntu.com/questions/60401/batch-processing-tif-images-converting-tif-to-jpeg
 
 ## Filters
 
@@ -150,9 +154,23 @@ We can do this to simulate difficult capture conditions, and evaluate the algori
 
 1.  Read the manual page
 2.  Try the diffente noise types, and save the noisy images to the repository (5 images)
+    >   Ejemplo:
+        A = imread('7.1.08.tiff');
+        J = imnoise(A,'salt & pepper');
+         figure, imshow(A)
+         figure, imshow(J)
+Problema: cuando uso este script para crear la imagen con el ruido "localvar" me sale el siguiente error en Matlab:
+Error using imnoise>ParseInputs (line 200)
+Too few inputs for 'localvar' noise.
+
+Error in imnoise (line 84)
+[a, code, classIn, classChanged, p3, p4] =
+ParseInputs(varargin{:});
+
+Nose como arreglarlo.
 3.  Try saving noisy images as jpg, what happens?
 
-    > Answer
+    > La imagen se guarda sin ningun problema pero la dimensión del output cambia de 512X512 a 603X682X3 porque se crea un borde blanco al rededor de la imagen con ruido. Sin embargo, la cantidad de ruido o el resto de las propiedades de la imagen no cambian.
 
 ### Median filter
 
