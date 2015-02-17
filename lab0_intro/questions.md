@@ -24,13 +24,13 @@
             find / -name text '/pics' -prune\ 
 Indica buscar todos los files que contengan 'text' en su nombre exepto en el subdirectorio /pics.
 
-5.  Where is the file ``xxxxxx``
+5.  Where is the file ``grub.cfg``
     >   answer
 
-6.  How many files with ``gnu`` in its name are in ``dir``
+6.  How many files with ``gnu`` in its name are in ``/usr/src``
     >   answer
 
-7.  How many files contain ``gpl`` inside in ``dir``
+7.  How many files contain ``gpl`` inside in ``/usr/src``
     >   answer
 
 8.  What does the ``cut`` command do?
